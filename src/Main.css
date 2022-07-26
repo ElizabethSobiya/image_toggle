@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,700;1,100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 100px 100px 100px 100px;
+    overflow-y: hidden;
+    padding: 2rem;
+    background: #fff; 
+}
+
+.mainWrapper{
+    box-shadow: 0 4px 21px -12px rgb(0, 0, 0, 0.79);
+}
+
+.mainWrapper{
+   display: flex;
+   flex-direction: column;
+   /* align-items: center; */
+   /* justify-content: center; */
+   width: 100%;
+
+}
+.img img{
+    width: 100%;
+    /* height: 300px; */
+    object-fit: cover;
+}
+
+
+.bottom{
+    padding: 1% 1%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    width: 100%;
+    margin:10px 10px;
+
+}
+.dot{
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+.head{
+    font-family: 'Lato', sans-serif;
+    font-weight:700;
+    text-align: start;
+    /* margin: 20px; */
+    margin-top:1%; 
+    padding: 1%;
+}
+
+.img:after, .img:before {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.img:after {
+    content: '\A';
+    width: 40%; height:55%;
+    /* top: 0; left:0; */
+    background:rgba(0,0,0,0.6);
+}
+.learn{
+    display: none;
+}
+
+.learn:hover{
+    display: visible;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    color: #fff;
+}
+
+.img:hover:after, .image:hover:before {
+    opacity: 1;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1% 6%;
+    opacity: 0.5;
+    
+}
+
+.img{
+    /* width: 100%; */
+    display: flex;
+    flex-direction:row;
+}
+
+.content{
+    /* font-family: sans-serif; */
+   /* opacity: 0.8; */
+   font-weight: 100;
+   text-align: left;
+   padding: 2%;
+   opacity: 0.5;
+}
+
+.blue{
+    height: 15px;
+    width: 15px;
+    background-color: #00FFFF;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.yellow{
+    height: 15px;
+    width: 15px;
+    background-color: #FFA500;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+
+/* img details */
+
+.img-details{
+ position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color:black;
+  background:white;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  width: 50%;
+  height: 90%;
+  overflow-y: scroll;
+  /* display:none ; */
+  padding: 2rem 0;
+}
+
+.closeBtn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background: #fff;
+    color: black;
+    border: none;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.img-details::-webkit-scrollbar {
+    width: 10px;
+  }
+.img-details:-webkit-scrollbar-thumb {
+    background: #f0f0f0;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.content{
+    opacity:0.9;
+}
+
+.avatar p{
+    opacity:0.9;
+    margin-top:3%;
+    margin-left: 2%;
+}
+.avatar{
+    display: flex;
+    flex-direction:row;
+    padding: 2%;
+    
+    
+}
+.avatar img{
+    border-radius: 50%;
+    width: 10%;
+    /* height: 10%; */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@media screen and (max-width:720px)  {
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
