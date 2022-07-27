@@ -42,6 +42,7 @@ body{
     padding: 1% 1%;
     display: flex;
     flex-direction: column;
+    font-weight: 800;
     /* align-items: center;
     justify-content: center; */
     width: 100%;
@@ -75,7 +76,7 @@ body{
     /* top: 0; left:0; */
     background:rgba(0,0,0,0.6);
 }
-.learn{
+/* .learn{
     display: none;
 }
 
@@ -86,7 +87,7 @@ body{
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     color: #fff;
-}
+} */
 
 .img:hover:after, .image:hover:before {
     opacity: 1;
@@ -111,7 +112,7 @@ body{
 .content{
     /* font-family: sans-serif; */
    /* opacity: 0.8; */
-   font-weight: 100;
+   font-weight: 800;
    text-align: left;
    padding: 2%;
    opacity: 0.5;
@@ -132,6 +133,16 @@ body{
     border-radius: 50%;
     display: inline-block;
 
+}
+
+button{
+    /* background-color: red; */
+    font-family: 'Lato', sans-serif;
+    /* margin-top: 20px; */
+    font-weight: 800;
+    border: none;
+    background-color: #fff;
+    padding: 2%;
 }
 
 /* img details */
@@ -155,7 +166,7 @@ body{
   width: 50%;
   height: 90%;
   overflow-y: scroll;
-  /* display:none ; */
+  display:none ;
   padding: 2rem 0;
 }
 
@@ -216,6 +227,22 @@ body{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
+
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 @media screen and (max-width:720px)  {
     .container{
