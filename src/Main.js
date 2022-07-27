@@ -19,17 +19,26 @@ function Main() {
     fetchUsers()
  },[])
 
-//  function getContent(e){
-//    e.preventDefault();
-//    if(e.tar)
-//  }
-const container = () => {
-   document.getElementById('container');
- }
 
-const getContent = () => {
-   container.classList.add('img-details');
-}
+let container = document.getElementById('container')
+var span = document.getElementsByClassName("close")[0];
+let button = document.getElementById('btn')
+
+function modal() {
+   container.style.display = "block";
+ }
+ 
+ // When the user clicks on <span> (x), close the modal
+  function span(){
+   container.style.display = "none";
+ }
+ 
+ // When the user clicks anywhere outside of the modal, close it
+ Window.onClick = function(event) {
+   if (event.target == modal) {
+     modal.style.display = "none";
+   }
+ }
 // const getContent = () => {
 //    container.classList.add('img-details');
 // }
@@ -50,10 +59,11 @@ const getContent = () => {
         {users.map(user => (
       <div className='mainWrapper'>  
           <div className="top">
-            <div className="img" onClick = {getContent}>
+            <div className="img">
             <img  src={user.thumbnail.small} alt=''/>
-            <p className='learn'>Learn more</p>
+            
             </div>
+            <button id='btn' onClick={modal}>Learn more</button>
           </div>
           <div className="bottom">
   <div className="dot">
@@ -75,7 +85,7 @@ const getContent = () => {
     </div>
     {users.map(user => (
     <div className="img-details" id="container">
-      <button type='button' className='closeBtn'><i className='fa fa-times'></i></button>
+      <span className='close' onClick={span} id='close'><i className='fa fa-times'></i></span>
       <div className='top'>
       <img src={user.thumbnail.large} alt="" />
       <p className='content'>{user.content}</p>
@@ -91,3 +101,4 @@ const getContent = () => {
 }
 
 export default Main
+
